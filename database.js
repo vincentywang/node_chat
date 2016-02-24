@@ -6,12 +6,13 @@
 var LocalStrategy   = require('passport-local').Strategy;
 var mysql = require('mysql');
 var md5 = require('md5');
+var credential = require('./credentials.js');
 
 var connection = mysql.createConnection({
-  host     : '',
-  user     : '',
-  password : '',
-  database : ''
+  host     : credential.db_host,
+  user     : credential.db_user,
+  password : credential.db_pass,
+  database : credential.db_database
 });
 
 // module.exports = connection;
