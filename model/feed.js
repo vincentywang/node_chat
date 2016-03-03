@@ -18,7 +18,7 @@ var query = {
     callback(sQuery);
   },
 	'queryGetAllPartyFeeds' : function (partyId, callback) {
-		var _partyID = 'synaparty_' + partyId,
+		var _partyID = 'party_' + partyId,
 		    sQuery = '';
 		gchat.getGchatByMkey(_partyID, function (gchat) {
       console.log(gchat);
@@ -40,7 +40,7 @@ var query = {
 		ORDER BY f.created DESC LIMIT 20;
 		 */
 		
-		var _partyID = 'synaparty_' + partyId,
+		var _partyID = 'party_' + partyId,
 		    sQuery = '';
 		gchat.getGchatByMkey(_partyID, function(gchat) {
 			// console.log(_partyID);

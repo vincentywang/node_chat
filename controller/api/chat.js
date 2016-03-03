@@ -6,7 +6,7 @@
  */
 
 var router = require('express').Router(),
-    gchat = require('../../models/gchat'),
+    gchat = require('../../models/chat'),
     util = require('../../lib/util');
 
 
@@ -75,7 +75,7 @@ router.post('/event-id', function (req, res, next) {
   console.log('this route are reached by post method');
   console.log(req.body);
   console.log('the event id is ' + eid);
-  gchat.newSynapartyChat(eid, function (data) {
+  gchat.newEventChat(eid, function (data) {
     res.json(data);
   });
 });
