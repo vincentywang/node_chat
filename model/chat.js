@@ -116,7 +116,7 @@ var gchat = {
           callback({
             'success' : false,
             'message' : 'Can not get member of public chat room'
-          })
+          });
         } else {
           // throw error
           throw new Error('return gchat have no type properties');
