@@ -1,5 +1,17 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+
+  #login-container
+    form( method="post", action="/login")#login-form.well.span4
+      h1 Hello!
+      p.subheading Please Login To Your Account
+      label Username 
+      input(type="text", name="email", id='user-tf').span4.required
+      label Password
+      input(type="password", name="password", id='pass-tf').span4.required
+      button(type="submit")#btn-login.btn.btn-primary
+        i.icon-lock.icon-white
+        | Sign in
+      div.clear-fix
+      hr
